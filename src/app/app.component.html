@@ -1,0 +1,37 @@
+<main class="page">
+  <form [formGroup]="form" class="form" (keyup.enter)="generateArray()">
+    <div class="form__block">
+      <span class="form__block__title">Size (between 2 and 20) </span>
+      <input formControlName="size" type="number" title="size" min="2" max="20" class="form__block__input">
+    </div>
+
+    <div class="form__block">
+      <span class="form__block__title">Range (between 1 and 100) </span>
+      <input formControlName="min" type="number" title="range" min="1" max="100"  class="form__block__input">
+      <span class="form__block__title"> - </span>
+      <input formControlName="max" type="number" title="range" min="1" max="100"  class="form__block__input">
+    </div>
+
+    <div class="form__block">
+      <span class="form__block__title">Move to</span>
+      <label class="form__block__input">
+        <input type="radio" value="start" formControlName="sort">
+        <span>start</span>
+      </label>
+      <label class="form__block__input">
+        <input type="radio" value="end" formControlName="sort">
+        <span>end</span>
+      </label>
+    </div>
+
+    <button class="form__btn" (click)="generateArray()">
+      Generate array
+    </button>
+  </form>
+
+  <div class="array">
+    <div *ngFor="let item of array; let i = index" class="array__item">
+      <span (click)="moveNumber(i, item)">{{item}}</span>
+    </div>
+  </div>
+</main>
