@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.createForm()
-
   }
 
   public generateArray(): void {
