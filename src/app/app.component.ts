@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   public generateArray(): void {
     const { size, min, max } = this.form.value;
 
+
     if (this.form.valid) {
       this.array = Array
         .from({ length: size }, () => Math.floor(Math.random()  * (Number(max) + 1 - Number(min)) + Number(min)))
