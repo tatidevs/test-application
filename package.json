@@ -2,7 +2,6 @@
   "name": "test-project",
   "version": "0.0.0",
   "scripts": {
-    "prepare": "husky install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -12,7 +11,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commi\"",
+      "pre-commit": "echo \"pre-commit\"",
       "pre-push": "ng lint"
     }
   },
