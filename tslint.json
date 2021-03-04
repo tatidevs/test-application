@@ -145,7 +145,7 @@
     "component-selector": [
       true,
       "element",
-      "B3A",
+      "b3a",
       "kebab-case"
     ]
   }
