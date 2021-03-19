@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
         });
     } else {
       this.array = [];
+      // commit test
     }
   }
 
